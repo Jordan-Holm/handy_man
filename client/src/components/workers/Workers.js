@@ -42,9 +42,9 @@ const Workers = () => {
 
   return (
     <>
-      <ListForm addWorker={addWorker} />
+      <WorkerForm addWorker={addWorker} />
       <h1>All Workers</h1>
-      <AllList 
+      <AllWorker 
         workers={workers}
         updateWorker={updateWorker}
         deleteWorker={deleteWorker}
