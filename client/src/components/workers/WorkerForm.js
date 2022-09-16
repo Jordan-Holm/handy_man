@@ -5,7 +5,7 @@ const WorkerForm = ({ addWorker, id, first_name, last_name, position, updateWork
 
   useEffect( () => {
     if (id) {
-      setList({ first_name, last_name, position })
+      setWorker({ first_name, last_name, position })
     }
   }, [])
 
