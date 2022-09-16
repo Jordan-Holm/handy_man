@@ -160,3 +160,14 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   faker
+  pg (~> 1.1)
+  pry
+  puma (~> 5.0)
+  rails (~> 7.0.4)
+  tzinfo-data
+
+RUBY VERSION
+   ruby 3.1.2p20
+
+BUNDLED WITH
+   2.3.21
