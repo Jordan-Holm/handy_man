@@ -4,7 +4,7 @@ class Api::ServicesController < ApplicationController
     before_action :set_service, only: [:show, :update, :destroy]
 
     def index
-        render json: Service.all
+        render json: @worker.service.all
     end
 
     def show
@@ -13,7 +13,7 @@ class Api::ServicesController < ApplicationController
 
     def create
 
-        @service = Service.new(set_params)
+        @service = @worker.service.new(set_params)
         if @service.save
             render json:@service
         else
@@ -41,12 +41,12 @@ class Api::ServicesController < ApplicationController
 
     private
         
-        # def set_parent
-            # @worker = Worker.find(params[:worker_id])
-        # end
+        def set_parent
+            @worker = Worker.find(params[:worker_id])
+        end
 
         def set_service
-            @service = Service.find(params[:id])
+            @service = @worker.service.find(params[:id])
         end
 
         def set_params
