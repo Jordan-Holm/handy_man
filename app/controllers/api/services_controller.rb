@@ -1,6 +1,6 @@
 class Api::ServicesController < ApplicationController
 
-    # before_action :set_parent
+    before_action :set_parent
     before_action :set_service, only: [:show, :update, :destroy]
 
     def index
