@@ -22,7 +22,7 @@ const Workers = () => {
     axios.put(`/api/workers/${id}`, { worker })
       .then( res => {
         const newUpdatedWorkers = workers.map( w => {
-          if (w.id == id) {
+          if (w.id === id) {
             return res.data
           }
           return w
