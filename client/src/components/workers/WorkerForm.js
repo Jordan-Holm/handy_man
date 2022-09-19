@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const WorkerForm = ({ addWorker, id, first_name, last_name, position, updateWorker, setEdit }) => {
-  const [worker, setWorker] = useState({ first_name: '', last_name: '', psoition: '' })
+  const [worker, setWorker] = useState({ first_name: '', last_name: '', position: '' })
 
   useEffect( () => {
     if (id) {
@@ -26,7 +26,7 @@ const WorkerForm = ({ addWorker, id, first_name, last_name, position, updateWork
       <form onSubmit={handleSubmit}>
         <input 
           name='first_name'
-          value={worker.firts_name}
+          value={worker.first_name}
           onChange={(e) => setWorker({ ...worker, first_name: e.target.value })}
           required
           placeholder='First name'
