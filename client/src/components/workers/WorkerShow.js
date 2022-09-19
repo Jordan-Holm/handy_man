@@ -33,7 +33,7 @@ const WorkerShow = ({ id, first_name, last_name, position, updateWorker, deleteW
           <Link
             to={`/${id}/services`} //path of where its going to 
             // id the list id
-            state={{ WorkerFirst_Name: first_name, WorkerLast_Name: last_name}}
+            state={{ First_name: first_name, Last_Name: last_name}}
             // state only read only value to pass to the page
           >
             <button>Todos</button>
