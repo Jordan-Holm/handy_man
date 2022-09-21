@@ -13,11 +13,11 @@ class Api::CommentsController < ApplicationController
 
   def create
     @comment = @service.comment.new(comment_params)
-    render json: @comment
-  else
-    renderjson: { errors: @comment.erros }, status: :unproccessable_entity
-  end
-
+    if @comment.save
+      render json: @comment
+    else
+      renderjson: { errors: @comment.errors }, status: :unproccessable_entity
+    end
   end
 
   def update
@@ -33,7 +33,7 @@ class Api::CommentsController < ApplicationController
   def destroy
     @comment = @service.comment.find(params[:id])
     @comment.destroy
-    render json: { message: 'model_name deleted' }
+    render json: { message: 'comment deleted' }
   end
 
   

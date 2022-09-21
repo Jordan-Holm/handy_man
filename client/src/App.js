@@ -6,6 +6,7 @@ import Terms from './components/shared/footer/Terms';
 import Team from './components/shared/team/Team';
 import Workers from './components/workers/Workers';
 import Services from './components/services/Services';
+import Comments from './components/comments/Comments';
 import NoMatch from './components/shared/NoMatch';
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
       <Route path='/team' element={<Team />} />
       <Route path='/workers' element={<Workers />} />
       <Route path='/:workerId/services' element={<Services />} />
+      <Route path='/:serviceId/comments' element={<Comments />} />
       <Route path='/privacy' element={<Privacy />} />
       <Route path='terms' element={<Terms />} />
       <Route path='/*' element={<NoMatch />} />
